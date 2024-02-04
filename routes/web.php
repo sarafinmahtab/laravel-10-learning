@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EntryController;
 use App\Http\Controllers\UserController;
 
@@ -28,3 +29,5 @@ Route::view('login', 'entry');
 
 Route::view('restrict', 'name_length_restrict');
 Route::get('users', [UserController::class, 'index']);
+
+Route::get('employees', [EmployeeController::class, 'getAll']);
