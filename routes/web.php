@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EntryController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,4 @@ Route::post('entry', [EntryController::class, 'submit'])->middleware('nameLength
 Route::view('login', 'entry');
 
 Route::view('restrict', 'name_length_restrict');
+Route::get('users', [UserController::class, 'index']);
