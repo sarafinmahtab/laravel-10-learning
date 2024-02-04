@@ -22,9 +22,7 @@ Route::get('wife', function () {
     return view('farah');
 });
 
-Route::group(['middleware'=>['nameLengthCheck']], function() {
-    Route::post('entry', [EntryController::class, 'submit']);
-    Route::view('login', 'entry');
-});
+Route::post('entry', [EntryController::class, 'submit'])->middleware('nameLengthCheck');
+Route::view('login', 'entry');
 
 Route::view('restrict', 'name_length_restrict');
