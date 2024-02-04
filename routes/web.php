@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EntryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Route::get('wife', function () {
     return view('farah');
 });
+
+Route::post('entry', [EntryController::class, 'submit']);
+Route::view('login', 'entry');
