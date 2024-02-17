@@ -24,10 +24,10 @@ Route::get('wife', function () {
     return view('farah');
 });
 
-Route::post('entry', [EntryController::class, 'submit'])->middleware('nameLengthCheck');
-Route::view('login', 'entry');
-
 Route::view('restrict', 'name_length_restrict');
-Route::get('users', [UserController::class, 'index']);
 
+Route::view('login', 'login_form');
+Route::post('result', [EntryController::class, 'submit'])->middleware('nameLengthCheck');
+
+Route::get('users', [UserController::class, 'index']);
 Route::get('employees', [EmployeeController::class, 'getAll']);

@@ -8,8 +8,7 @@ use App\Models\User;
 class EmployeeController extends Controller
 {
     //
-    function getAll()
-    {
+    function getAll() {
         return User::all();
     }
 }
