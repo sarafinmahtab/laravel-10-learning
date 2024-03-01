@@ -27,6 +27,7 @@ Route::get('wife', function () {
 Route::view('restrict', 'name_length_restrict');
 
 Route::view('login', 'login_form');
+Route::view('register', 'register_form');
 Route::post('result', [EntryController::class, 'submit'])->middleware('nameLengthCheck');
 
 Route::get('users', [UserController::class, 'index']);
