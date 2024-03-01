@@ -15,7 +15,7 @@ class CheckNameLength
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $nameLengthCheck = strlen($request->firstname) + strlen($request->lastname);
+        $nameLengthCheck = strlen($request->name);
 
         if ($nameLengthCheck > 24)
         {

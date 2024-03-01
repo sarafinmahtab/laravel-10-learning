@@ -28,7 +28,8 @@ Route::view('restrict', 'name_length_restrict');
 
 Route::view('login', 'login_form');
 Route::view('register', 'register_form');
-Route::post('result', [EntryController::class, 'submit'])->middleware('nameLengthCheck');
+Route::post('login_result', [LoginController::class, 'submit']);
+Route::post('entry_result', [EntryController::class, 'submit'])->middleware('nameLengthCheck');
 
 Route::get('users', [UserController::class, 'index']);
 Route::get('employees', [EmployeeController::class, 'getAll']);
