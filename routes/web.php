@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EntryController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 
 /*

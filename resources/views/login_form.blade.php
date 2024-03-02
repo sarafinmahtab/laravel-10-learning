@@ -40,6 +40,10 @@
                             <div class="alert alert-success">
                                 {{ session()->get('user') }} is registered. Try login.
                             </div>
+                        @elseif($errors->any())
+                            <div class="alert alert-danger">
+                                {{ $errors->first() }}
+                            </div>
                         @endif
 
                         <form action="/login_result" method="POST">
