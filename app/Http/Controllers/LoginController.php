@@ -18,6 +18,8 @@ class LoginController extends Controller
         ]);
 
         if ($user && Hash::check($password, $user->password)) {
+            $name = $user->name;
+            $request->session()->put('name', $name);
             return redirect('/');
         } else {
             // Invalid credentials, handle error
